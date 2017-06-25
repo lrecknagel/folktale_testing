@@ -1,0 +1,13 @@
+{
+  "name": "folktale_testing",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:lrecknagel/folktale_testing.git",
+  "author": "Lucas Recknagel <lucas91@me.com>",
+  "license": "MIT",
+  "dependencies": {
+    "folktale": "^2.0.0-beta1",
+    "ramda": "^0.24.1",
+    "ramda-fantasy": "^0.8.0"
+  }
+}
