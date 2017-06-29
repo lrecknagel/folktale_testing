@@ -28,6 +28,30 @@ _row_new.push(findLanguage(WANTED_L).getOrElse(findLanguage(FB_A)).getOrElse(fin
 console.log(_row_new);
 console.timeEnd('NEW');
 
+
+function findLanguage2(lng) {
+  return _data_no_de.find(avp => avp.lng.includes(lng));
+}
+function getOrElse(_default, ...args) {
+  for(let i = 1; i < arguments.length; i++) {
+    if (arguments[i] !== undefined && arguments[i] !== null) {
+      return arguments[i]
+    }
+  }
+  return _default
+}
+console.time('NEW2');
+let _row_new2 = []
+_row_new2.push(getOrElse(
+  'BACKUP',
+  findLanguage2(WANTED_L),
+  findLanguage2(FB_A),
+  findLanguage2(FB_B)
+).var)
+console.log(_row_new2);
+console.timeEnd('NEW2');
+
+
 console.time('OLD');
 let _row_old = []
 const _avp_wanted_lng = _data_no_de.find(avp => avp.lng.includes(WANTED_L));
